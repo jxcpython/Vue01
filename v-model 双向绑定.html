@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa {
+            border: 2px red solid;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="message">
+    <hr>
+    <p>{{message}}</p>
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message: "",
+        },
+        methods:{
+            changeValue(){
+                this.message = "百知教育"
+            },
+        }
+    })
+</script>
+</body>
+</html>

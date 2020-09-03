@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <hr>
+    <h3>年龄：{{age}}</h3>
+    <hr>
+    <input type="button" value="点我变得更年轻" v-on:click="change_age">
+
+</div>
+<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            message:"百知教育",
+            age:70,
+        },
+        methods:{
+             change_age: function () {
+                 this.age--;
+             }
+         }
+    })
+</script>
+</body>
+</html>

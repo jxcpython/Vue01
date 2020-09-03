@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+
+    <input type="button" value="控制标签显示隐藏" @click="change_1()">
+    <h2 v-show="isShow">{{message}}</h2>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            message:"靳薛城",
+            isShow:true,
+        },
+        methods: {
+            change_1() {
+                console.log()
+                this.isShow=!this.isShow
+            },
+        }
+    })
+</script>
+</body>
+</html>

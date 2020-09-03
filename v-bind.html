@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aa {
+            border: 2px red solid;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <img :src="src" width="300px" height="400" alt="" :title="title" :class="{aa: showCss}">
+    <input type="button" value="动态加入图片样式" @click="addCss">
+    <input type="button" value="上一张" @click="changeImg1">
+    <input type="button" value="下一张" @click="changeImg2">
+</div>
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            title: "二哈",
+            showCss: true,
+            src: "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=195734936,2926387328&fm=26&gp=0.jpg"
+        },
+        methods:{
+            // 改变图片样式
+            addCss(){
+                this.showCss = !this.showCss;
+            },
+            // 切换图片
+            changeImg1(){
+                this.src = "https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=195734936,2926387328&fm=26&gp=0.jpg"
+            },
+            changeImg2(){
+                this.src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3291638106,1894579552&fm=26&gp=0.jpg"
+            },
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+
+    <input type="text" v-model="msg">
+    <input type="button" value="发表到留言板" >
+
+    <ul>
+        <li v-for="(value, index) in notebook" :key="index">
+            <span>{{value}}</span>
+        </li>
+    </ul>
+
+</div>
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            notebook: ["留言1", "vue真好用"],
+            msg: "请输入",
+        },
+
+    })
+</script>
+
+</body>
+</html>
